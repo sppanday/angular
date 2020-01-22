@@ -1,0 +1,14 @@
+<div class="left">
+  <p>Student Database</p>
+  <table class="mat-table">
+  <tr *ngFor="let student of students | async">
+    <td>
+      {{student.name}}
+    </td>
+  </tr>
+  </table>
+  <input type = "text" placeholder="ID" #id>
+  <input type = "text" placeholder="name" #name>
+  <button (click)="addStudent(id.value, name.value)">Add Students</button>
+</div>
+
